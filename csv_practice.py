@@ -1,3 +1,11 @@
+# Reflection Questions
+# 1. This same task in excel would be harder with large datasets that are utilized in companies and real world scenarios.
+# Python is able to digest large datasets and perform formula calculations much faster than excel. Except excel is defintely
+# easier for beginners.
+# 2. A business would benefit from a appened log file because it would allow them to track the numbers of sales that occuring while
+# also calculating revenue and other important calcuations. Append tool would be the best option because it helps with tracking.
+
+
 print("Exercise 1: Setup") #!!!
 
 print("Exercise 2: Read and print raw rows") #!!!
