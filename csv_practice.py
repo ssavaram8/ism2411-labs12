@@ -113,3 +113,5 @@ with open("data/log.csv", "r") as f:
         entries += 1
         print(line.strip())
 print(f"Total log entries: {entries}")
+
+# DONE!!! WHOOP WHOOP!!!
