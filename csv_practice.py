@@ -39,7 +39,7 @@ print(f"total revenue: ${sum(total):.2f}")
 print("Exercise 5: Filter + Write") #!!!
 
 high_value = []
-rows_read = []
+rows_read = 0
 
 with open ("data/sales.csv", "r") as f:
     reader = csv.reader(f)
@@ -78,3 +78,30 @@ with open("data/sales.csv", "r") as f:
 
 print("Exercise 7: Sales summary by product") #!!!
 
+summary = {}
+with open ("data/sales.csv", "r") as f:
+    reader = csv.DictReader(f)
+    for row in reader:
+        product = row["product"]
+        price = float(row["price"])
+        qty = int(row["quantity"])
+        revenue = price * qty
+        summary[product] = summary.get(product, 0) + revenue
+
+for product, total in summary.items():
+    print(f"{product}: ${total:.2f}")
+
+print("Exercise 8: Append mode log") #!!!
+
+from datetime import datetime
+
+timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+with open("data/log.csv", "a", newline="") as f:
+    f.write(f"{timestamp}: processed {rows_read} rows, wrote {len(high_value)} high value rows to clean.csv")
+
+entries = 0
+with open("data/log.csv", "r") as f:
+    for line in f:
+        entries += 1
+        print(line.strip())
+print(f"Total log entries: {entries}")
