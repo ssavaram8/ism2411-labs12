@@ -1,6 +1,6 @@
-print ("Exercise 1 - Setup")
+print ("Exercise 1: Setup") #!!!
 
-print ("Exercise 2 - Read and print raw rows")
+print ("Exercise 2: Read and print raw rows") #!!!
 
 import csv
 with open("data/sales.csv", "r") as f:
@@ -8,7 +8,7 @@ with open("data/sales.csv", "r") as f:
     for row in reader:
         print(row)
 
-print ("Exercise 3 - Skip the header")
+print ("Exercise 3: Skip the header") #!!!
 
 with open("data/sales.csv", "r") as f:
     reader = csv.reader(f)
@@ -17,10 +17,9 @@ with open("data/sales.csv", "r") as f:
         print(row)
     print("Header:", header)
 
-print ("Exercise 4 - Compute totals") 
+print ("Exercise 4: Compute totals") #!!!
 
 total = []
-
 with open("data/sales.csv", "r") as f:
     reader = csv.reader(f)
     header = next(reader)
@@ -37,3 +36,4 @@ with open("data/sales.csv", "r") as f:
 
 print(f"total revenue: ${sum(total):.2f}")
 
+print ("Exercise 5: Filter + Write") #!!!
